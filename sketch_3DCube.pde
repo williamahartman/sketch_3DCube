@@ -19,11 +19,11 @@ class Point3d {
   
 
   ScreenCoords toScreenCoords(int originX, int originY, int size) {
-    return new ScreenCoords(round(originX - (size/2)*sqrt(3)*x + (size/2)*sqrt(3)*y), 
-                            round(originY + (size/2)*x + (size/2)*y - size*z));
+    return new ScreenCoords(originX - (size/2.0)*sqrt(3)*x + (size/2.0)*sqrt(3)*y, 
+                            originY + (size/2.0)*x + (size/2.0)*y - size*z);
   }
 }
-
+s
 //A polygon in 3D space
 class Face {
   Point3d[] points;
@@ -58,9 +58,9 @@ class Face {
 
 //Just a 2D point to draw on the screen
 class ScreenCoords{
-  public int x, y;
+  public float x, y;
  
- ScreenCoords(int x, int y) {
+ ScreenCoords(float x, float y) {
    this.x = x;
    this.y = y;
  } 
@@ -131,8 +131,12 @@ void draw() {
   stroke(hue, 255, 255);
   
   if(cycleColor) {
-    if(hue < 256) {hue++;}
-    else {hue = 0;} 
+    if(hue < 256) {
+      hue++;
+    }
+    else {
+      hue = 0;
+    } 
   }
   
   if(keyPressed) {
