@@ -1,4 +1,7 @@
 # sketch_3DCube
+
+![alt tag](https://raw.githubusercontent.com/williamahartman/sketch_3DCube/master/processing_cube.gif)
+
 Use the arrow keys to rotate things and the space bar to enable/disable color cycling.
 
   This was just another little experiment I did a little while ago in Processing. It's a little parallel projection renderer.
