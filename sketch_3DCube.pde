@@ -23,7 +23,7 @@ class Point3d {
                             originY + (size/2.0)*x + (size/2.0)*y - size*z);
   }
 }
-s
+
 //A polygon in 3D space
 class Face {
   Point3d[] points;
